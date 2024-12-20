@@ -1,0 +1,143 @@
+<header class="header">
+  <div class="logo">
+    <img src="skill-high-resolution-logo.png" alt="Logo" width="120px" height="auto">
+  </div>
+  <nav class="nav">
+    <a href="/home">Home</a>
+    <a href="/posts">My Posts</a>
+  </nav>
+  <div class="search-bar">
+    <input type="text" placeholder="Search" class="search-input" />
+    <button class="search-button">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <div class="profile" (click)="toggleDropdown()" [class.active]="isDropdownOpen">
+    <span>Rodge Romer Muni</span>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+    <div class="dropdown-menu" *ngIf="isDropdownOpen">
+      <ul>
+        <li (click)="goToProfile()"><mat-icon>person</mat-icon>Profile</li>
+        <li (click)="Logout()"><mat-icon>logout</mat-icon>Log Out</li>
+      </ul>
+    </div>
+  </div>    
+</header>
+
+<body>
+  <!-- Profile Section -->
+  <div class="profile-card modern-card">
+    <div class="profile-header"></div>
+    <div class="profile-body">
+      <div class="edit-icon">
+        <mat-icon>edit</mat-icon>
+      </div>
+      <div class="profile-image"></div>
+      <div class="profile-info">
+        <h2>Rodge Romer Muni</h2>
+        <p>Student at Gordon College, Olongapo City</p>
+        <a href="#" class="contact-link">Contact info</a>
+      </div>
+      <div class="profile-role">
+        <p>Student at Gordon College, Olongapo City</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="modern-card about-section">
+    <div class="edit-icon">
+      <mat-icon>edit</mat-icon>
+    </div>
+    <h3>About me</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <!-- Activity Section -->
+  <div class="modern-card activity-section">
+      <button class="create-post-btn">
+        Create Post
+      </button>
+      <div class="edit-icon">
+        <mat-icon>edit</mat-icon>
+      </div>
+    <h3>Activity</h3>
+    <h5>14,113 followers</h5>
+    <div class="activity-tabs">
+      <button class="tab active">Posts</button>
+      <button class="tab">Comments</button>
+      <button class="tab">Images</button>
+    </div>
+    <div class="activity-posts">
+      <!-- Post 1 -->
+      <div class="post">
+        <p class="post-text">
+          I received an email from a fresher who wanted to work for free. <br />
+          When I read the email, I immediately asked him to visit the office...
+        </p>
+        <div class="post-footer">
+          <div class="reaction-icons">
+            <mat-icon>thumb_up</mat-icon>
+            <mat-icon>favorite</mat-icon>
+            <span>9,863</span>
+          </div>
+          <span class="comments-count">342 comments</span>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="post">
+        <p class="post-text">
+          There's a vacancy for Company Secretary/Semi Qualified Person <br />
+          Position: CS or Semi CS...
+        </p>
+        <div class="post-footer">
+          <div class="reaction-icons">
+            <mat-icon>thumb_up</mat-icon>
+            <mat-icon>favorite</mat-icon>
+            <span>47</span>
+          </div>
+          <span class="comments-count">40 comments</span>
+        </div>
+      </div>
+    </div>
+    
+    <a href="/posts"><button class="show-all-btn">Show all posts</button></a>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="modern-card skills-section">
+    <div class="edit-icon">
+      <mat-icon>edit</mat-icon>
+    </div>
+    <h3>Skills</h3>
+    <ul>
+      <li>Full-Stack Development</li>
+      <li>Web development</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </div>
+
+  <!-- Education Section -->
+  <div class="modern-card education-section">
+    <div class="edit-icon">
+      <mat-icon>edit</mat-icon>
+    </div>
+    <h3>Education</h3>
+    <p><strong>Gordon College, Olongapo City</strong></p>
+    <p>Information Technology</p>
+    <p>Aug 2022 - 2025</p>
+  </div>
+
+  <!-- Experience Section -->
+  <div class="modern-card experience-section">
+    <div class="edit-icon">
+      <mat-icon>edit</mat-icon>
+    </div>
+    <h3>Experience</h3>
+    <p><strong>Management Information System Intern</strong></p>
+    <p>IDESS Maritime Centre (Subic) Inc.</p>
+    <p>Jul 2023 - Jul 2023</p>
+    <p>Subic Central Luzon, Philippines</p>
+  </div>
+</body>

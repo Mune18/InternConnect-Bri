@@ -1,0 +1,58 @@
+<!-- Modernized Login Modal -->
+<div class="modal-overlay" *ngIf="isModalVisible" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h2>Welcome Back!</h2>
+    <p class="modal-subtitle">Please log in to continue</p>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="modal-actions">
+        <button type="submit" class="modal-login-btn">Login</button>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+    <p class="modal-footer-text">
+      No account? Register Now (<a href="/register-intern">Intern</a> / 
+      <a href="/register-recruiter">Employer</a>)
+    </p>
+  </div>
+</div>
+
+<header class="landing-header">
+  <div class="left-section">
+    <div class="logo">
+      <img src="lde---curated---11-high-resolution-logo-transparent.png" alt="InternConnect Logo" >
+    </div>
+    <nav class="nav-menu">
+      <a href="/jobs">Jobs</a>
+      <a href="/internship">Internship</a>
+    </nav>
+  </div>
+  <div class="right-section">
+    <a (click)="openModal()" class="landing-login-btn">Login</a>
+    <a href="/register-intern" class="signup-btn">Intern Sign-Up</a>
+    <a href="/register-recruiter" class="signup-btn">Employer Sign-Up</a>
+  </div>
+</header>
+
+<div class="container">
+    <h1>Fuel Your Ambition, Land Your Dream Internship Today!</h1>
+    <p>Discover endless opportunities to learn, grow, and make meaningful connections as you take the first step toward building the career you've always dreamed of.</p>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Company Name or Internship Name">
+        <input type="text" placeholder="Address">
+        <button>Search</button>
+    </div>
+
+    <div class="popular-section">
+        <h2>Popular on InternConnect🔥</h2>
+        <!-- Add your popular items here -->
+    </div>
+</div>

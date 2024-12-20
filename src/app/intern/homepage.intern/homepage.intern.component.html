@@ -1,0 +1,92 @@
+<header class="header">
+  <div class="left-section">
+    <div class="logo">
+      <img src="lde---curated---11-high-resolution-logo-transparent.png" alt="InternConnect Logo">
+
+    </div>
+    <nav class="nav-menu">
+      <a href="/home" >Home</a>
+      <a href="/internship" class="active">Internship</a>
+      <a href="/profile">Profile</a>
+    </nav>
+  </div>
+  <div class="profile" (click)="toggleDropdown()" [class.active]="isDropdownOpen">
+    <span>Rodge Romer Muni</span>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+    <div class="dropdown-menu" *ngIf="isDropdownOpen">
+      <ul>
+        <li (click)="goToProfile()"><mat-icon>person</mat-icon>Profile</li>
+        <li (click)="Logout()"><mat-icon>logout</mat-icon>Log Out</li>
+      </ul>
+    </div>
+  </div>  
+</header>
+
+<div class="homepage-container">
+  <div class="stats">
+    <h1>3498 Total Internships</h1>
+    <p>Latest Internships in Philippines</p>
+  </div>
+
+  <div class="content-layout">
+    <!-- Left Sidebar -->
+    <div class="filters-sidebar">
+      <div class="search-box">
+        <h3>Search</h3>
+        <div class="search-input">
+          <input type="text" placeholder="e.g. Software Development">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="filters">
+        <h3><i class="fas fa-filter"></i> Filters</h3>
+
+        <div class="filter-section">
+          <h4>Preference</h4>
+          <input type="text" placeholder="e.g. Software Development">
+        </div>
+
+        <div class="filter-section">
+          <h4>Location</h4>
+          <input type="text" placeholder="e.g. Subic Bay Freeport Zone">
+        </div>
+
+        <div class="filter-section">
+          <h4>Max. Duration</h4>
+          <select>
+            <option value="">Choose Duration</option>
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+          </select>
+        </div>
+
+        <div class="filter-section">
+          <h4>Desired Monthly Stipend</h4>
+          <select>
+            <option value="">Choose Amount</option>
+            <option value="5000">₱5,000</option>
+            <option value="10000">₱10,000</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="internships-list">
+      <div class="internship-card" *ngFor="let i of [1,2,3,4,5]">
+        <div class="card-header">
+          <h3>Internship Name (e.g., Software Developer)</h3>
+          <img src="assets/company-logo.png" alt="Company Logo">
+        </div>
+        <div class="card-body">
+          <p class="company">Copper Corp.</p>
+          <div class="details">
+            <span><i class="fas fa-map-marker-alt"></i> Olongapo City</span>
+            <span><i class="fas fa-money-bill"></i> ₱500/month</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
